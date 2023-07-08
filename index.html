@@ -440,34 +440,61 @@
 
 
 		<!-- CHATBOT -->
-		<div class="container">
+		<div id="openai-chat-window-shortcode">
 			<div class="container" style="margin-top:2rem;margin-bottom:2rem">
-				<h3>Zadaĭte vŭpros i poluchete bŭrz otgovor</h3>
-				<p>Nashata avtomatizirana usluga v momenta se testva i mozhe da predostavi netochna informatsiya, vinagi mozhete da se svŭrzhete s nas.</p>
+				<h3>Ask a question and get a fast response</h3>
+				<p>Our automated service is currently being tested and may produce inaccurate information, you can always contact us.</p>
 			</div>
-			<style>
-				.openai-shortcode-container textarea {
-					width: 100%;
-					max-width: 500px;
-					padding: 8px;
-					font-size: 16px;
-					border: 1px solid #ccc;
-					border-radius: 4px;
-				}
-				#openai-submit {
-				font-size: 16px;
-				}
-			</style>
-			<div class="openai-shortcode-container" style="margin-bottom:2rem">
-				<div id="openai-answer"></div>
-				<h3>Zadaĭ vŭpros:</h3>
-				<!-- <input type="text" id="openai-question" placeholder="Type your question..."> -->
-				<textarea id="openai-question" rows="2" cols="50" placeholder="Vŭvedete vŭprosa si..."></textarea>
-				<button id="openai-submit">Izpratete</button>
-			</div>
-			
+			<div class="openai-shortcode-container" style="margin-bottom:1rem">
+  
+				<div id="language-buttons">
+					<button class="language-button" data-lang="en">English</button>
+					<button class="language-button" data-lang="fr">French</button>
+					<button class="language-button" data-lang="de">German</button>
+					<button class="language-button" data-lang="pl">Polish</button>
+					<button class="language-button" data-lang="it">Italian</button>
+					<button class="language-button" data-lang="hr">Croatian</button>
+					<button class="language-button" data-lang="swe">Swedish</button>
+					<button class="language-button" data-lang="nor">Norwegian</button>
+					<button class="language-button" data-lang="es">Spanish</button>
+					<button class="language-button" data-lang="pt">Portuguese</button>
+					<button class="language-button" data-lang="bg">Bulgarian</button>
+					<button class="language-button" data-lang="ro">Romanian</button>
+					
+					</div>
+  
+  
+			<!-- <h3>Select a category:</h3> -->
+			<h3 id="category-title" style="margin-block-end: 0; margin-bottom: 0; text-align: center;">Select a category:</h3>
+			<p id="category-title2" style="margin-block-start:0px;margin-top:0px; text-align: center;"><i>(This allows for best results)</i></p>
 
+  
+			<div class="category-container">
+			  <ul class="category-list">
+				<li><button class="category-button" value="knowledge_uk.txt">General Product Inquiry</button></li>
+				<li><button class="category-button" value="knowledge_dosage.txt">Dosage</button></li>
+				<li><button class="category-button" value="knowledge_ups.txt">UPS Shipping</button></li>
+				<li><button class="category-button" value="knowledge_payment.txt">Payment</button></li>
+				<li><button class="category-button" value="knowledge_parcel.txt">Parcel Status</button></li>
+				<li><button class="category-button" value="human">Chat with human</button></li>
+				<li><button class="category-button" value="whatsapp">WhatsApp</button></li>
+			  </ul>
+			</div>
+  
+  
+			<div id="shorcode_input_block">
+			
+			<h3 id="category-title3" style="margin-block-end:0px;margin-bottom:0px">Ask a question:</h3>
+			<p id="category-title4" style="margin-block-start:0px;margin-top:0px"><i>(It can take a few seconds, please be patient)</i></p>
+			
+			<div id="openai-answer2"></div>
+			<textarea id="openai-question2" class="category-title5" rows="2" cols="50" placeholder="Type your question..." style="display: none;"></textarea>
+			<button class="ask-button" id="openai-submit2">Ask</button>
+			</div>
+  
 		</div>
+		</div>
+		<!-- END CHATBOT -->
 
 
 		<hr>
@@ -584,6 +611,7 @@
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="OA4V5CFM47/jquery-3.4.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="OA4V5CFM47/popper.min.js"></script>
