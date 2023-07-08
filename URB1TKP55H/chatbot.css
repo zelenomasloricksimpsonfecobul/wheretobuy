@@ -1,105 +1,106 @@
 
 /* Main container for the shortcode */
 .openai-shortcode-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f5f5f5;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f5f5f5;
   
-  /* Styling for the question input field */
-  .openai-shortcode-container textarea {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    background-color: #fff;
-  }
-  
-  /* Styling for the submit button */
-  #openai-submit {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    background-color: #007bff;
-    color: #fff;
-    border: 1px solid #007bff;
-    border-radius: 4px;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  #openai-submit:hover {
-    background-color: #0069d9;
-    border-color: #0062cc;
-  }
-  
-  /* Styling for the answer container */
-  #openai-answer {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 600;
-    text-align: left;
-    color: #007bff;
-  }
-  
-  /* Styling for the question container */
-  #openai-question-container {
-    display: none;
-    margin-bottom: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: left;
-    color: #007bff;
-  }
-  
-  /* Styling for the question text */
-  #openai-question-text {
-    font-weight: 400;
-  }
-  
+}
+
+/* Styling for the question input field */
+.openai-shortcode-container textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  background-color: #fff;
+}
+
+/* Styling for the submit button */
+#openai-submit {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#openai-submit:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+/* Styling for the answer container */
+#openai-answer {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  color: #007bff;
+}
+
+/* Styling for the question container */
+#openai-question-container {
+  display: none;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  color: #007bff;
+}
+
+/* Styling for the question text */
+#openai-question-text {
+  font-weight: 400;
+}
+
 
 /* Styling for the question text */
 .openai-question-text {
-    margin-bottom: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #007bff;
-  }
-  
-  /* Styling for the answer text */
-  .openai-answer-text {
-    margin-bottom: 10px;
-    font-size: 16px;
-    font-weight: 400;
-    text-align: left;
-  }
-  
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #007bff;
+}
+
+/* Styling for the answer text */
+.openai-answer-text {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
 
 
-  /* Styling for the submit button */
-  #openai-submit2 {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    background-color: #007bff;
-    color: #fff;
-    border: 1px solid #007bff;
-    border-radius: 4px;
-    transition: background-color 0.3s ease-in-out;
-  }
+
+/* Styling for the submit button */
+#openai-submit2 {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
 
 
 
@@ -107,105 +108,299 @@
 /* ///  HOVERING CHATWINDOW */
 
 
+/* #openai-chat-window {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 350px;
+  height: 550px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  z-index: 99999;
+  margin-top: 0;
+}
+
+#openai-chat-header {
+  background-color: #3670cd;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+} */
+
+
+
 #openai-chat-window {
   display: none;
   position: fixed;
   bottom: 90px;
   right: 20px;
-  width: 300px;
-  height: 400px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 0 0 5px rgba(0,0,0,.3);
+  width: 350px;
+  height: 550px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   font-family: Arial, sans-serif;
   font-size: 14px;
   z-index: 99999;
+  margin-top: 0;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+#openai-chat-window:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 
 #openai-chat-header {
-  /* background-color: #0073aa; */
-  background-color: var(--header-color, #00b700);
+  background-color: #3670cd;
   color: #fff;
   padding: 10px;
   font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
 }
+
+#openai-chat-header:hover {
+  background-color: #789bd3;
+}
+
+
+
 
 
 #openai-chat-body {
-  height: 350px;
-  overflow-y: auto;
-  padding: 10px;
+height: 370px;
+overflow-y: auto;
+padding: 10px;
 }
 
 #openai-chat-input-container {
-  display: flex;
+display: flex;
 }
 
 
 #openai-chat-input {
-  /* width: 100%; */
-  height: 50px;
-  border: none;
-  border-top: 1px solid #ccc;
-  font-size: 16px;
-  padding: 10px;
-  box-sizing: border-box;
-  box-shadow: 0 0 5px rgba(0,0,0,.3);
-  flex: 1;
+/* width: 100%; */
+height: 50px;
+border: none;
+border-top: 1px solid #ccc;
+font-size: 16px;
+padding: 10px;
+box-sizing: border-box;
+box-shadow: 0 0 5px rgba(0,0,0,.3);
+flex: 1;
+background-color: #e0e4ff;
 }
 
 
 #openai-chat-submit {
-  height: 50px;
-  width: 50px;
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  border: none;
-  box-shadow: 0 0 5px rgba(0,0,0,.3);
-  cursor: pointer;
+height: 50px;
+width: 50px;
+background-color: #ffffff;
+color: rgb(0, 0, 0);
+border: none;
+box-shadow: 0 0 5px rgba(0,0,0,.3);
+cursor: pointer;
 }
 
 
 
 #openai-chat-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 10px;
-  cursor: pointer;
+position: absolute;
+top: 0;
+right: 0;
+padding: 10px;
+cursor: pointer;
 }
 
 #openai-chat-icon {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 60px;
-  height: 60px;
-  background-color: #00b700;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 100000;
-  /* ... delay chat icon ... */
-  display: none;
+position: fixed;
+bottom: 20px;
+right: 20px;
+width: 60px;
+height: 60px;
+background-color: #1b0ed8;
+border-radius: 50%;
+cursor: pointer;
+z-index: 100000;
+/* ... delay chat icon ... */
+display: none;
 }
 
 #openai-chat-notification {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+position: absolute;
+top: -5px;
+right: -5px;
+width: 20px;
+height: 20px;
+background-color: red;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+font-size: 12px;
+font-weight: bold;
+}
+
+
+
+/* Styling for the category container */
+.category-container {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+padding: 10px;
+flex-direction: column;
+}
+
+/* Styling for the category buttons */
+.category-button {
+display: inline-flex;
+justify-content: center;
+align-items: center;
+padding: 5px 10px;
+margin: 5px;
+font-size: 16px;
+font-weight: 400;
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s ease-in-out;
+}
+
+.category-button:hover {
+background-color: #0069d9;
+}
+
+
+
+#back-button {
+  padding: 5px 10px;
+  background-color: #6a6f6a; /* Green background */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Makes the mouse cursor change to a hand when hovering over the button */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
   font-size: 12px;
-  font-weight: bold;
+  margin: 4px 2px;
+  transition-duration: 0.4s; /* Creates a smooth hover transition */
+  /* right: 10px;
+  position: absolute; */
+  
+}
+
+#back-button:hover {
+  background-color: white; /* White background */
+  color: black; /* Black text */
+}
+
+
+.highlighted-category {
+  background-color: #abcdef; /* Replace with your preferred color */
+  color: white; /* Replace with your preferred color */
+}
+
+.language-button {
+  background-color: #dfdfdf;
+  /* color: rgb(0, 0, 0); */
+  border: none;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10px;
+} 
+
+.language-button:hover {
+  /* Highlight the selected button with a different color */
+  background-color: #7c6d6d;
+  color: white;
+}
+
+.language-button.selected {
+  /* Highlight the selected button with a different color */
+  background-color: #747373;
+  color: white;
+}
+
+
+.category-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1px;
+}
+
+.category-list li {
+  display: flex;
+}
+
+.category-button {
+  flex-grow: 1;
+}
+
+
+.loading {
+  display: flex;
+  align-items: center;
+}
+
+.loading img {
+  margin-right: 10px;
 }
 
 
 
 
+@media screen and (max-width: 768px) {
+#openai-chat-window {
+  position: fixed; /* Fixed positioning */
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 95%;
+}
+#openai-chat-body {
+  height: 57%;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+#openai-chat-window-shortcode {
+  position: relative;
+  /* width: 300px; */
+  max-width: 100%;
+}
+
+}
+
+
+
+/* Media query for mobile screens */
+@media (max-width: 480px) {
+  /* .openai-chat-window-shortcode {
+    max-width: 100%;
+  } */
+
+  #openai-question2 {
+    max-width: 95%;
+  }
+
+}
